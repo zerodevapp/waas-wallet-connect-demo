@@ -1,2 +1,0 @@
-export { useWalletConnect } from "./useWalletConnect"
-

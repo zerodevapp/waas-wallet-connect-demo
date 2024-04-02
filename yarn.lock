@@ -1605,6 +1605,20 @@
   dependencies:
     permissionless "^0.0.34"
 
+"@zerodev/waas@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@zerodev/waas/-/waas-0.0.3.tgz#d35776a70bf8e599c6aae7e2a3c589ab51d0f824"
+  integrity sha512-XduxSq/aDA1MaJYcDYmy2zDeRlgskgMpa0/PhXhIvbPjv9tNKxkv38SckSJlwnMPjNt5h4EqJi2UgrmqkTCzDQ==
+  dependencies:
+    "@walletconnect/core" "^2.11.3"
+    "@walletconnect/encoding" "^1.0.2"
+    "@walletconnect/web3wallet" "^1.10.3"
+    "@zerodev/sdk" "^5.1.18"
+    lodash "^4.17.21"
+    permissionless "0.0.34"
+    react "^18.2.0"
+    viem "2.9.4"
+
 abitype@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/abitype/-/abitype-1.0.0.tgz#237176dace81d90d018bebf3a45cb42f2a2d9e97"
@@ -4559,6 +4573,20 @@ valtio@^1.13.2:
     derive-valtio "0.1.0"
     proxy-compare "2.6.0"
     use-sync-external-store "1.2.0"
+
+viem@2.9.4:
+  version "2.9.4"
+  resolved "https://registry.yarnpkg.com/viem/-/viem-2.9.4.tgz#0431a016366c0c920fb42c7e30eaea044ff7beac"
+  integrity sha512-j239PwRYc9WU7GOogfJ5Iu/5jwYaidpR85gLxKCwQmuXkNILKiRHntEM15EAtC9bcgaa9oklYwQ+/MlLU593/A==
+  dependencies:
+    "@adraffy/ens-normalize" "1.10.0"
+    "@noble/curves" "1.2.0"
+    "@noble/hashes" "1.3.2"
+    "@scure/bip32" "1.3.2"
+    "@scure/bip39" "1.2.1"
+    abitype "1.0.0"
+    isows "1.0.3"
+    ws "8.13.0"
 
 viem@^2.9.0:
   version "2.9.0"
