@@ -2,11 +2,12 @@ import { useState, useEffect } from 'react'
 import createAccount from './createAccount'
 import { KernelAccountClient } from '@zerodev/sdk'
 import { useWalletConnect } from '@zerodev/waas'
-import { polygon, base } from "viem/chains"
+import { polygonMumbai, polygon, base } from "viem/chains"
 import './App.css'
 
 const baseZeroDevProjectId = import.meta.env.VITE_BASE_PROJECT_ID ?? ''
 const polygonZeroDevProjectId = import.meta.env.VITE_POLYGON_PROJECT_ID ?? ''
+const mumbaiZeroDevProjectId = import.meta.env.VITE_MUMBAI_PROJECT_ID ?? ''
 
 if (!baseZeroDevProjectId || !polygonZeroDevProjectId) {
   throw new Error('Project IDs not found')
@@ -15,12 +16,28 @@ if (!baseZeroDevProjectId || !polygonZeroDevProjectId) {
 function App() {
   const [account, setAccount] = useState()
   const [uri, setUri] = useState('')
-  const [chain, setChain] = useState<'base' | 'polygon'>('base')
+  const [chain, setChain] = useState<'base' | 'polygon' | 'mumbai'>('base')
 
   useEffect(() => {
     const getAccount = async () => {
-      const projectId = chain === 'base' ? baseZeroDevProjectId : polygonZeroDevProjectId
-      const chainObj = chain === 'base' ? base : polygon
+      let projectId;
+      let chainObj;
+      switch (chain) {
+        case 'base':
+          projectId = baseZeroDevProjectId
+          chainObj = base
+          break
+        case 'polygon':
+          projectId = polygonZeroDevProjectId
+          chainObj = polygon
+          break
+        case 'mumbai':
+          projectId = mumbaiZeroDevProjectId
+          chainObj = polygonMumbai
+          break
+        default:
+          throw new Error('Unsupported chain')
+      }
       const account = (await createAccount(projectId, chainObj)) as KernelAccountClient;
       setAccount(account);
     }
@@ -57,10 +74,25 @@ function App() {
         </>
       )}
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4"
-        onClick={() => setChain(chain === 'base' ? 'polygon' : 'base')}
+        className={`bg-blue-500 text-white font-bold py-2 px-4 rounded mb-4 ${chain === 'base' && 'opacity-50 cursor-not-allowed'}`}
+        disabled={chain === 'base'}
+        onClick={() => setChain('base')}
       >
-        Switch to {chain === 'base' ? 'Polygon' : 'Base'}
+        Base
+      </button>
+      <button
+        className={`bg-blue-500 text-white font-bold py-2 px-4 rounded mb-4 ${chain === 'polygon' && 'opacity-50 cursor-not-allowed'}`}
+        disabled={chain === 'polygon'}
+        onClick={() => setChain('polygon')}
+      >
+        Polygon
+      </button>
+      <button
+        className={`bg-blue-500 text-white font-bold py-2 px-4 rounded mb-4 ${chain === 'mumbai' && 'opacity-50 cursor-not-allowed'}`}
+        disabled={chain === 'mumbai'}
+        onClick={() => setChain('mumbai')}
+      >
+        Mumbai
       </button>
       <div className="flex gap-2 mb-4">
         <input
