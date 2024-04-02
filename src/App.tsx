@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import createAccount from './createAccount'
 import { KernelAccountClient } from '@zerodev/sdk'
-import { useWalletConnect } from '@zerodev/waas'
+import { useWalletConnect } from './hooks'
 import { polygonMumbai, polygon, base } from "viem/chains"
 import './App.css'
 
