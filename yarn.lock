@@ -1587,10 +1587,10 @@
   dependencies:
     permissionless "^0.0.34"
 
-"@zerodev/waas@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@zerodev/waas/-/waas-0.0.1.tgz#4f2f2d41fc22d03f12c7cca69ff790e0f7fc2713"
-  integrity sha512-JsWn1Y6mIVPeA6cclOcM/5h+sT0qvDnFVRLgVHxo1IPbPL4+5O+moCdKFE6u0AKOBWuWGjeJRSiG1vv97kkFkw==
+"@zerodev/waas@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@zerodev/waas/-/waas-0.0.3.tgz#d35776a70bf8e599c6aae7e2a3c589ab51d0f824"
+  integrity sha512-XduxSq/aDA1MaJYcDYmy2zDeRlgskgMpa0/PhXhIvbPjv9tNKxkv38SckSJlwnMPjNt5h4EqJi2UgrmqkTCzDQ==
   dependencies:
     "@walletconnect/core" "^2.11.3"
     "@walletconnect/encoding" "^1.0.2"
@@ -3617,6 +3617,7 @@ strict-uri-encode@^2.0.0:
   integrity sha512-QwiXZgpRcKkhTj2Scnn++4PKtWsH0kpzZ62L2R6c/LUVYv7hVnZqcg2+sMuT6R7Jusu1vviK/MFsu6kNJfWlEQ==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
+  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
