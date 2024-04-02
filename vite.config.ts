@@ -9,7 +9,16 @@ export default defineConfig({
     react()
   ],
   build: {
-    target: 'es2020'
+    target: 'es2020',
+    minify: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'viem-vendor': ['viem', '@zerodev/sdk', '@zerodev/waas'],
+        },
+      },
+    },
   },
   optimizeDeps: {
     esbuildOptions : {
