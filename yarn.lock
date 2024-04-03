@@ -1605,10 +1605,10 @@
   dependencies:
     permissionless "^0.0.34"
 
-"@zerodev/waas@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/@zerodev/waas/-/waas-0.0.3.tgz#d35776a70bf8e599c6aae7e2a3c589ab51d0f824"
-  integrity sha512-XduxSq/aDA1MaJYcDYmy2zDeRlgskgMpa0/PhXhIvbPjv9tNKxkv38SckSJlwnMPjNt5h4EqJi2UgrmqkTCzDQ==
+"@zerodev/waas@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@zerodev/waas/-/waas-0.0.6.tgz#71a012c91fcfed79816b72747cf9fe11fd1ae5ef"
+  integrity sha512-fp2hv8SQ0GAFKeoNoyvMkzJHf3U9RJtqsKMmzpnKXhnPr7O/14cHE69/BmLefoB/ciucUUi7u3bllcJHebsGaA==
   dependencies:
     "@walletconnect/core" "^2.11.3"
     "@walletconnect/encoding" "^1.0.2"
