@@ -94,8 +94,7 @@ function App() {
       {account && (
         <div>
           <p className="text-center mb-2"><strong>Address: </strong> {(account as KernelAccountClient).account.address}</p>
-          <p className="text-center mb-2"><strong>Chain: </strong> {(account as KernelAccountClient).chain.id}</p>
-          <p className="text-center mb-2"><strong>Is Deployed: </strong> {isDeployed ? 'Yes' : 'No'}</p>
+          <p className="text-center mb-2"><strong>Is account deployed: </strong> {isDeployed ? 'Yes' : 'No'}</p>
           {!isDeployed && (
             <button
               className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4"
@@ -104,6 +103,7 @@ function App() {
               Deploy Wallet
             </button>
           )}
+          <p className="text-center mb-2"><strong>Chain: </strong> {(account as KernelAccountClient).chain.id}</p>
         </div>
       )}
       <div>

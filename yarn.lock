@@ -1605,15 +1605,16 @@
   dependencies:
     permissionless "^0.0.34"
 
-"@zerodev/waas@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@zerodev/waas/-/waas-0.0.6.tgz#71a012c91fcfed79816b72747cf9fe11fd1ae5ef"
-  integrity sha512-fp2hv8SQ0GAFKeoNoyvMkzJHf3U9RJtqsKMmzpnKXhnPr7O/14cHE69/BmLefoB/ciucUUi7u3bllcJHebsGaA==
+"@zerodev/waas@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@zerodev/waas/-/waas-0.0.7.tgz#87fec8c448fe566dfca6e235e969dc7532e0fbe3"
+  integrity sha512-TNgE+sxSLnpZ/ugi2+us967lE9glQC9sCJ+zObqzP70r51D2WPfslpuDF4cXPImGCCw80N535EdWq683hYRn/w==
   dependencies:
     "@walletconnect/core" "^2.11.3"
     "@walletconnect/encoding" "^1.0.2"
     "@walletconnect/web3wallet" "^1.10.3"
     "@zerodev/sdk" "^5.1.18"
+    events "^3.3.0"
     lodash "^4.17.21"
     permissionless "0.0.34"
     react "^18.2.0"
