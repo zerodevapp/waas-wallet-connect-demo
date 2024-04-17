@@ -1,23 +1,24 @@
 import { useState, useEffect } from 'react'
 import createAccount from './createAccount'
-import { KernelAccountClient } from '@zerodev/sdk'
 import { useWalletConnect } from '@zerodev/waas'
-import { polygonMumbai, polygon, base } from "viem/chains"
+import { sepolia, polygon, base } from "viem/chains"
 import { zeroAddress } from 'viem'
 import './App.css'
+import { KernelAccountClient } from '@zerodev/sdk'
+import { EntryPoint } from 'permissionless/types'
 
 const baseZeroDevProjectId = import.meta.env.VITE_BASE_PROJECT_ID ?? ''
 const polygonZeroDevProjectId = import.meta.env.VITE_POLYGON_PROJECT_ID ?? ''
-const mumbaiZeroDevProjectId = import.meta.env.VITE_MUMBAI_PROJECT_ID ?? ''
+const sepoliaZeroDevProjectId = import.meta.env.VITE_SEPOLIA_PROJECT_ID ?? ''
 
 if (!baseZeroDevProjectId || !polygonZeroDevProjectId) {
   throw new Error('Project IDs not found')
 }
 
 function App() {
-  const [account, setAccount] = useState()
+  const [account, setAccount] = useState<Awaited<ReturnType<typeof createAccount>>>()
   const [uri, setUri] = useState('')
-  const [chain, setChain] = useState<'base' | 'polygon' | 'mumbai'>('base')
+  const [chain, setChain] = useState<'base' | 'polygon' | 'sepolia'>('base')
   const [isDeployed, setIsDeployed] = useState(false)
 
   useEffect(() => {
@@ -33,14 +34,14 @@ function App() {
           projectId = polygonZeroDevProjectId
           chainObj = polygon
           break
-        case 'mumbai':
-          projectId = mumbaiZeroDevProjectId
-          chainObj = polygonMumbai
+        case 'sepolia':
+          projectId = sepoliaZeroDevProjectId
+          chainObj = sepolia
           break
         default:
           throw new Error('Unsupported chain')
       }
-      const account = (await createAccount(projectId, chainObj)) as KernelAccountClient;
+      const account = await createAccount(projectId, chainObj);
       setAccount(account);
     }
     getAccount()
@@ -49,8 +50,9 @@ function App() {
   useEffect(() => {
     const isContractWallet = async () => {
       if (!account) return false;
-      const bytecode = await (account as KernelAccountClient).account.client.getBytecode({
-        address: (account as KernelAccountClient).account.address
+      // @ts-expect-error: ignore for now
+      const bytecode = await account.account.client.getBytecode({
+        address: account.account.address
       });
       setIsDeployed(!!bytecode);
     }
@@ -70,13 +72,13 @@ function App() {
     approveSessionRequest,
     rejectSessionRequest
   } = useWalletConnect({
-    kernelClient: account
+    kernelClient: account as KernelAccountClient<EntryPoint>
   })
 
   const deployWallet = async () => {
     if (!account) return;
     console.log('deploying wallet')
-    const txnHash = await (account as KernelAccountClient).sendTransaction({
+    const txnHash = await account.sendTransaction({
       to: zeroAddress,
       value: BigInt(0),
       data: "0x",
@@ -93,7 +95,7 @@ function App() {
       <h1 className="text-2xl font-bold text-center mb-4">ZeroDev WalletConnect Demo</h1>
       {account && (
         <div>
-          <p className="text-center mb-2"><strong>Address: </strong> {(account as KernelAccountClient).account.address}</p>
+          <p className="text-center mb-2"><strong>Address: </strong> {account.account.address}</p>
           <p className="text-center mb-2"><strong>Is account deployed: </strong> {isDeployed ? 'Yes' : 'No'}</p>
           {!isDeployed && (
             <button
@@ -103,7 +105,7 @@ function App() {
               Deploy Wallet
             </button>
           )}
-          <p className="text-center mb-2"><strong>Chain: </strong> {(account as KernelAccountClient).chain.id}</p>
+          <p className="text-center mb-2"><strong>Chain: </strong> {account.chain.id}</p>
         </div>
       )}
       <div>
@@ -123,11 +125,11 @@ function App() {
           Polygon
         </button>
         <button
-          className={`bg-blue-500 text-white font-bold py-2 px-4 rounded mb-4 ${chain === 'mumbai' && 'opacity-50 cursor-not-allowed'}`}
-          disabled={chain === 'mumbai'}
-          onClick={() => setChain('mumbai')}
+          className={`bg-blue-500 text-white font-bold py-2 px-4 rounded mb-4 ${chain === 'sepolia' && 'opacity-50 cursor-not-allowed'}`}
+          disabled={chain === 'sepolia'}
+          onClick={() => setChain('sepolia')}
         >
-          Mumbai
+          Sepolia
         </button>
       </div>
       <div className="flex gap-2 mb-4">
