@@ -1592,7 +1592,7 @@
   resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.29.0.tgz#d0b3d12c07d5a47f42ab0c1ed4f317106f3d4b20"
   integrity sha512-WgPTRs58hm9CMzEr5jpISe8HXa3qKQ8CxewdYZeVnA54JrPY9B1CZiwsCoLpLkf0dGRZq+LcX5OiJb0bEsOFww==
 
-"@tanstack/react-query@^5.28.14":
+"@tanstack/react-query@^5.28.14", "@tanstack/react-query@^5.29.2":
   version "5.29.2"
   resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.29.2.tgz#c55ffbfaf9d8cf34212428db2b6c61ca6b545188"
   integrity sha512-nyuWILR4u7H5moLGSiifLh8kIqQDLNOHGuSz0rcp+J75fNc8aQLyr5+I2JCHU3n+nJrTTW1ssgAD8HiKD7IFBQ==
@@ -2490,61 +2490,68 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@zerodev/ecdsa-validator@5.2.1-alpha-6":
-  version "5.2.1-alpha-6"
-  resolved "https://registry.yarnpkg.com/@zerodev/ecdsa-validator/-/ecdsa-validator-5.2.1-alpha-6.tgz#0a4d581fb75fa98f39f69aa6f4dcec5c726dc702"
-  integrity sha512-aAgKTcgjab1/JIGYULuazo+tnvseJuZ8pXPOo9ybA2OHPrPHkd0Osw8LPGy6aq3DvK82Q5/UfMk0nMx7TOr8PA==
+"@zerodev/ecdsa-validator@^5.2.3":
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/@zerodev/ecdsa-validator/-/ecdsa-validator-5.2.3.tgz#19f55620c2254df53677662ce0715172675f28ed"
+  integrity sha512-zeJjYhOW5EWK6XnctPt3iVnrqmrHfb81p/fJKaY4yQnL2ZYPrH37ZgtY1z5COETPCDTm65+jPfc1Zn/dziyAXQ==
 
-"@zerodev/passkey-validator@5.2.1-alpha.6":
-  version "5.2.1-alpha.6"
-  resolved "https://registry.yarnpkg.com/@zerodev/passkey-validator/-/passkey-validator-5.2.1-alpha.6.tgz#d7b741d410b55611693027130004ab098ef8ad7e"
-  integrity sha512-yfssf1BUJFyqAUvEwapUdyrrtEo7//fZE4tNvD6HDgeDvbAc8/sNEz0h6KgoLC2rYNL0QWr095qiUMg4/ROh0Q==
+"@zerodev/passkey-validator@^5.2.3":
+  version "5.2.3"
+  resolved "https://registry.yarnpkg.com/@zerodev/passkey-validator/-/passkey-validator-5.2.3.tgz#e65376c43c7eec14977fb7b9207eecfc124fefc4"
+  integrity sha512-tw5PqBE2G5MlK8rQaQM+1fJlLaAQmY1uyIb5eAd+H5hLmurwmqPgjx3D7ygaiFHCJeUbC1yuM7ZzmkCSgbgMhQ==
   dependencies:
     "@noble/curves" "^1.3.0"
     "@simplewebauthn/browser" "^8.3.4"
 
-"@zerodev/permissions@5.2.1-alpha.15":
-  version "5.2.1-alpha.15"
-  resolved "https://registry.yarnpkg.com/@zerodev/permissions/-/permissions-5.2.1-alpha.15.tgz#0da33af855ce9ae73a8b5acee5a5f97c9a091f39"
-  integrity sha512-nre0D73AgXFNtWwQP8N6+6DWBsY5nj3Z3IqleSITeIkLCnXJyXfg+so06pDJ0g9kPeDssfr28OR/IqWd+AnJEA==
+"@zerodev/permissions@^5.2.2":
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/@zerodev/permissions/-/permissions-5.2.2.tgz#ad37c70d9e50ea31b080e69b9b40975b41f1e346"
+  integrity sha512-CyMfvuY0CLDCnaOlEiZfM1T9XfTTbaZUcunnzyzMQsjAMBUQK9B/wrLSQ9gYoJhLgra8zkbnCutdWNn4XXjI3w==
   dependencies:
     "@simplewebauthn/browser" "^9.0.1"
     merkletreejs "^0.3.11"
 
-"@zerodev/sdk@5.2.1-alpha-10":
-  version "5.2.1-alpha-10"
-  resolved "https://registry.yarnpkg.com/@zerodev/sdk/-/sdk-5.2.1-alpha-10.tgz#9af2d0538013f92af40b1671cb6dbf949c114687"
-  integrity sha512-2ihhbrVVQivybm9aTCwRrO3V2rAgUGUQE5SbarGjuVLSb9mhBx9LE26YWOmSuh59b5U5YN5ANzwqWSBnpW4wsw==
+"@zerodev/sdk@^5.2.4":
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/@zerodev/sdk/-/sdk-5.2.4.tgz#3775e7a49bd5641b04d950c9a7da0b6946b14271"
+  integrity sha512-qfMN9sKchVymlRgiAnQkN1RgeYH8YkfE3rSfJ6fMHsATNN6KS1eOf7KgS+ibxjEwN2vkKbBqjyYcVy4gRBA4kg==
   dependencies:
     semver "^7.6.0"
 
-"@zerodev/session-key@5.2.1-alpha.4":
-  version "5.2.1-alpha.4"
-  resolved "https://registry.yarnpkg.com/@zerodev/session-key/-/session-key-5.2.1-alpha.4.tgz#40d2d5781103da7933cc609b2d0bffae76276e61"
-  integrity sha512-m9+aV1q1Hi/cu5G0rJrNqgrvKBtD3NMF1b7w5nHwdYRWFBF4I6NE2ofo5Fi2E1BKmhZj4gf1N7oJp8uJiIBSVg==
+"@zerodev/sdk@^5.2.5":
+  version "5.2.5"
+  resolved "https://registry.yarnpkg.com/@zerodev/sdk/-/sdk-5.2.5.tgz#8a0b8e5347fa8b8ef1af7247c5bfc16c23b161ff"
+  integrity sha512-3qKiFLzU5dfiFYQk0ZymrEivcE5oaRa0SRjl3sJeqlYXNg4uqcy5h3b3PSiJiCzjCPBkGG1VScINVxenWtGZRg==
+  dependencies:
+    semver "^7.6.0"
+
+"@zerodev/session-key@^5.2.2":
+  version "5.2.2"
+  resolved "https://registry.yarnpkg.com/@zerodev/session-key/-/session-key-5.2.2.tgz#170f4f7d1163a661acd32d6a179f0d6b45c376a6"
+  integrity sha512-jHUjoRdzdP6DH8qIsSICLDMD+FgvBwZFQQ1ipgG33oK8696pFI4qjphMBQGA3kEqVzL0syKiO7eIUV8FlwD1mQ==
   dependencies:
     merkletreejs "^0.3.11"
 
-"@zerodev/waas@0.0.8-alpha.8":
-  version "0.0.8-alpha.8"
-  resolved "https://registry.yarnpkg.com/@zerodev/waas/-/waas-0.0.8-alpha.8.tgz#99b7088fdc580672b86420b037a7e88df7a42e26"
-  integrity sha512-4rXvXBVSH2GvRQyzklcNxgAqhjtIiBgXcV9ORZmpGCpAFhi4ZrZUTATU6HndepxkXOJnA7fa2aEGLsRqMFhhbg==
+"@zerodev/waas@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@zerodev/waas/-/waas-0.1.0.tgz#799c38b9fa7c90b91b5a4c4b862be559beb71541"
+  integrity sha512-HOfEwxKPjKpWB8i0xzAhb02GYAJ8dtohnRGiqs3f/2o2KXeMUpfyQSIpGcpHLUn2Zq+QTZTUC60YS6tjzUv0Vw==
   dependencies:
     "@tanstack/react-query" "^5.28.14"
     "@walletconnect/core" "^2.11.3"
     "@walletconnect/encoding" "^1.0.2"
     "@walletconnect/web3wallet" "^1.10.3"
-    "@zerodev/ecdsa-validator" "5.2.1-alpha-6"
-    "@zerodev/passkey-validator" "5.2.1-alpha.6"
-    "@zerodev/permissions" "5.2.1-alpha.15"
-    "@zerodev/sdk" "5.2.1-alpha-10"
-    "@zerodev/session-key" "5.2.1-alpha.4"
+    "@zerodev/ecdsa-validator" "^5.2.3"
+    "@zerodev/passkey-validator" "^5.2.3"
+    "@zerodev/permissions" "^5.2.2"
+    "@zerodev/sdk" "^5.2.4"
+    "@zerodev/session-key" "^5.2.2"
     events "^3.3.0"
     lodash "^4.17.21"
-    permissionless "^0.1.12"
+    permissionless "^0.1.18"
     react "^18.2.0"
-    viem "^2.9.16"
-    wagmi "^2.5.19"
+    viem "^2.9.21"
+    wagmi "^2.5.20"
 
 abitype@0.9.8:
   version "0.9.8"
@@ -5309,12 +5316,7 @@ pbkdf2@^3.0.3, pbkdf2@^3.1.2:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-permissionless@0.1.12:
-  version "0.1.12"
-  resolved "https://registry.yarnpkg.com/permissionless/-/permissionless-0.1.12.tgz#4cc80f90dd95353f53e1ba4f08bd21a5c5f9e1da"
-  integrity sha512-lB12zgMbQDdBlx7GZAdrZQUWBtDxT9D13aqLzwMe7o5SGUw62IR2rCnYVoU+iCFYnotZ6BdI3Q1YusktXsSebw==
-
-permissionless@^0.1.12:
+permissionless@^0.1.18:
   version "0.1.18"
   resolved "https://registry.yarnpkg.com/permissionless/-/permissionless-0.1.18.tgz#cefed0de1ad3cb3a36dd4512b6d965e08f56c19c"
   integrity sha512-A3OBQfA/wj+Qj5zXyMEoKwuwd+GgImG9EFYYtLHPooDJ26CL44HJpY27owH5MPsUS6IX+1E9N6mF4J/frQhXoQ==
@@ -6511,10 +6513,10 @@ viem@^1.0.0, viem@^1.1.4:
     isows "1.0.3"
     ws "8.13.0"
 
-viem@^2.9.16, viem@^2.9.20:
-  version "2.9.20"
-  resolved "https://registry.yarnpkg.com/viem/-/viem-2.9.20.tgz#71c6a45d22a8150072adee3dcb7a93fff5347d16"
-  integrity sha512-PHb1MrBHMrSZ8Ayuk3Y/6wUTcMbzlACQaM6AJBSv9kRKX3xYSZ/kehi+gvS0swQJeAlTQ4eZM7jsHQJNAOarmg==
+viem@^2.9.21:
+  version "2.9.21"
+  resolved "https://registry.yarnpkg.com/viem/-/viem-2.9.21.tgz#a7dd3d4c827088e5336e5a6b35ec0283d2938595"
+  integrity sha512-8GtxPjPGpiN5cmr19zSX9mb1LX/eON3MPxxAd3QmyUFn69Rp566zlREOqE7zM35y5yX59fXwnz6O3X7e9+C9zg==
   dependencies:
     "@adraffy/ens-normalize" "1.10.0"
     "@noble/curves" "1.2.0"
@@ -6554,7 +6556,7 @@ void-elements@3.1.0:
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-3.1.0.tgz#614f7fbf8d801f0bb5f0661f5b2f5785750e4f09"
   integrity sha512-Dhxzh5HZuiHQhbvTW9AMetFfBHDMYpo23Uo9btPXgdYP+3T5S+p+jgNy7spra+veYhBP2dCSgxR/i2Y02h5/6w==
 
-wagmi@^2.5.19:
+wagmi@^2.5.20:
   version "2.5.20"
   resolved "https://registry.yarnpkg.com/wagmi/-/wagmi-2.5.20.tgz#de1799c1eacb46d252b5a7838c5882f46882362d"
   integrity sha512-K/9qk6+t/+NKFdbQyB7LtFgl3UXnGjvgyzAyfMQ+dF56uTSJipQwc94CSlN8kdQXTIOvhUSK2P7WJrdTEd15AA==
