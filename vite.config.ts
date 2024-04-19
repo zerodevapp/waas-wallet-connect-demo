@@ -4,25 +4,10 @@ import { nodePolyfills } from 'vite-plugin-node-polyfills'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    nodePolyfills(),
-    react()
-  ],
+  plugins: [react(), nodePolyfills()],
   build: {
-    target: 'es2020',
     minify: false,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'viem-vendor': ['viem', '@zerodev/sdk', '@zerodev/waas'],
-        },
-      },
-    },
-  },
-  optimizeDeps: {
-    esbuildOptions : {
-      target: "es2020"
-    }
+    sourcemap: true
   }
 })
+

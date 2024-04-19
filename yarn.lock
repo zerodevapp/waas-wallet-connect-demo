@@ -1661,9 +1661,9 @@
     "@types/estree" "*"
 
 "@types/eslint@*":
-  version "8.56.9"
-  resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-8.56.9.tgz#403e9ced04a34e63f1c383c5b8ee1a94442c8cc4"
-  integrity sha512-W4W3KcqzjJ0sHg2vAq9vfml6OhsJ53TcUjUqfzzZf/EChUtwspszj/S0pzMxnfRcO55/iGq47dscXw71Fxc4Zg==
+  version "8.56.10"
+  resolved "https://registry.yarnpkg.com/@types/eslint/-/eslint-8.56.10.tgz#eb2370a73bf04a901eeba8f22595c7ee0f7eb58d"
+  integrity sha512-Shavhk87gCtY2fhXDctcfS3e6FdxWkCx1iUZ9eEUbh7rTqlZT0/IzOkCOVt0fCjcFuZ9FPYfuezTBImfHCDBGQ==
   dependencies:
     "@types/estree" "*"
     "@types/json-schema" "*"
@@ -2532,10 +2532,10 @@
   dependencies:
     merkletreejs "^0.3.11"
 
-"@zerodev/waas@0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@zerodev/waas/-/waas-0.1.0.tgz#799c38b9fa7c90b91b5a4c4b862be559beb71541"
-  integrity sha512-HOfEwxKPjKpWB8i0xzAhb02GYAJ8dtohnRGiqs3f/2o2KXeMUpfyQSIpGcpHLUn2Zq+QTZTUC60YS6tjzUv0Vw==
+"@zerodev/waas@0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@zerodev/waas/-/waas-0.1.2.tgz#7d6e592792f3e5d41296e3ac1e82da07fa815534"
+  integrity sha512-Epkv/+l5ZGcCJ4aRKpQ4X+pJjevB7e3BXvtLoxnFOfQNul4dwzGo0Z+1VJv9j5uonv/dQz3/CZrulu/yaZEhDA==
   dependencies:
     "@tanstack/react-query" "^5.28.14"
     "@walletconnect/core" "^2.11.3"
@@ -2550,8 +2550,6 @@
     lodash "^4.17.21"
     permissionless "^0.1.18"
     react "^18.2.0"
-    viem "^2.9.21"
-    wagmi "^2.5.20"
 
 abitype@0.9.8:
   version "0.9.8"
