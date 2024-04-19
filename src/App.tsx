@@ -42,7 +42,15 @@ function App() {
     sessionRequest,
     approveSessionRequest,
     rejectSessionRequest
-  } = useWalletConnect()
+  } = useWalletConnect({
+    projectId: 'bb1805e49e8bd78a9c75aefed3649d68',
+    metadata: {
+      name: 'ZeroDev Wallet',
+      url: 'https://zerodev.app',
+      description: 'Smart contract wallet for Ethereum',
+      icons: ['https://pbs.twimg.com/profile_images/1582474288719880195/DavMgC0t_400x400.jpg'],
+    }
+  })
 
   const deployWallet = async () => {
     if (!kernelClient) return;
